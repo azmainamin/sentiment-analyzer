@@ -1,0 +1,25 @@
+<% include header %>
+
+
+<div>
+    <ul>
+        <% 
+        var length = tweetList.length;
+        for(index = 0; index < length; index++){
+            %>
+            <li>
+                <%= tweetList[index] %></br> <%="  HAS A SENTIMENT SCORE OF: "+ sentimentScores[index] + "  from Sentiment Package" %> </br>
+              
+            </li>
+        
+        <% } %>
+        
+        
+    </ul>
+        
+    
+    
+    
+</div>
+
+<% include footer %>
