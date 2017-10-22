@@ -1,8 +1,13 @@
 <% include header %>
 
+      
 
+      
+      <% include getTweetsForm %>
+      
+      <div>
          <div class="row">
-                <div class="col sm10 m5">
+                <div class="col s6 offset-s3">
                   <h5>Tweets</h5>        
                 </div>
                 <div class="col sm2">
@@ -13,8 +18,8 @@
         var length = tweetList.length;
         for(index = 0; index < length; index++){
             %>
-            <div class="row">
-                  <div class="col sm10 m5">
+            <div class="row center-align" >
+                  <div class="col s6 offset-s3">
                     <div class="card-panel light-blue lighten-1">
                       <span class="white-text">
                           <%= tweetList[index]%>
@@ -33,5 +38,5 @@
             </div>
 
         <% } %>
-
+    </div>
 <% include footer %>
