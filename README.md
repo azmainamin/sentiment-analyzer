@@ -1,6 +1,5 @@
 <h1>Sentiment Analyzer</h1>
 
 
-Analyzes sentiment of tweets and news headlines from NYT.
-
+Search tweets by a query string and analyze their sentiment. 
 Readme.MD will be updated periodically.
