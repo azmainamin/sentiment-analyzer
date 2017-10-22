@@ -18,14 +18,14 @@ function getListOfTweets(queryString, countFromUser) {
                         tweetList.push(tweet);
                 });
 
-                resolve(_validateCount(tweetList, countFromUser));
+                resolve(_validateCountAndReturnTweetList(tweetList, countFromUser));
             }
             else reject(error);
         });
     });
 }
 
-function _validateCount(tweetList, countFromUser) {
+function _validateCountAndReturnTweetList(tweetList, countFromUser) {
     var result = [];
     if (tweetList.length < countFromUser)
         result = tweetList;
@@ -50,5 +50,7 @@ function _initTwitterApi() {
     return client;
 }
 module.exports = {
-    getListOfTweets
+    getListOfTweets,
+    _validateCountAndReturnTweetList,
+    _isRetweet
 }

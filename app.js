@@ -19,9 +19,6 @@ app.get("/tweets", (req, res) => {
 
     var calledFunction = twitterController.getListOfTweets("#chelsea", 10);
     calledFunction.then((tweetList) => {
-        if (tweetList == null) {
-            res.render('error');
-        }
         tweetList.forEach(tweet => {
             var sentimentValue = sentiment.analzyeSentiment(tweet);
             sentimentScoreFromSentiment.push(sentimentValue);

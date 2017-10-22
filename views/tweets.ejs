@@ -1,25 +1,45 @@
 <% include header %>
 
 
-<div>
-    <ul>
+        <% a() ; %>
+         <div class="row">
+                <div class="col sm10 m5">
+                  <h5>Tweets</h5>        
+                </div>
+                <div class="col sm2">
+                  <h5>Sentiment Score</h5>        
+                </div>
+        </div>
         <% 
         var length = tweetList.length;
         for(index = 0; index < length; index++){
             %>
-            <li>
-                <%= tweetList[index] %></br> <%="  HAS A SENTIMENT SCORE OF: "+ sentimentScores[index] + "  from Sentiment Package" %> </br>
-              
-            </li>
-        
+            <div class="row">
+                  <div class="col sm10 m5">
+                    <div class="card-panel light-blue lighten-1">
+                      <span class="white-text">
+                          <%= tweetList[index]%>
+                      </span>
+                    </div>
+                  </div>
+                
+
+                  <div class="col sm2">
+                    <div class="card-panel light-blue lighten-1">
+                      <span class="white-text">
+                          <%= sentimentScores[index]%>
+                      </span>
+                    </div>
+                  </div>
+            </div>
+
         <% } %>
-        
-        
-    </ul>
-        
-    
-    
-    
-</div>
+
+<%  
+function a() {
+    alert("Worked!");
+}
+
+%>
 
 <% include footer %>
