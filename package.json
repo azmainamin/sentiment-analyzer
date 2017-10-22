@@ -4,7 +4,8 @@
   "description": "Analyzes sentiments of tweets and news articles based on query string.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-init": "./node_modules/jasmine/bin/jasmine.js init",
+    "test": "./node_modules/jasmine/bin/jasmine.js"
   },
   "keywords": [
     "sentiment-analyzer",
@@ -21,6 +22,7 @@
     "ejs": "^2.5.7",
     "env2": "^2.2.0",
     "express": "^4.16.2",
+    "jasmine": "^2.8.0",
     "request": "^2.83.0",
     "sentiment": "^4.1.0",
     "twitter": "^1.7.1"
