@@ -1,0 +1,20 @@
+  <div class="row">
+    <form class="col s12" method="post" action="/tweets">
+      <div class="row">
+        <div class="input-field col s6">
+            <i class="small material-icons fa fa-twitter prefix"></i>
+            <input name = "query_string" id="icon_prefix" type="text" class="validate" required>
+            <label for="icon_prefix">Search term</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">all_inclusive</i>
+          <input name = "limit" id="icon_telephone" type="number" min="1" class="validate" required>
+          <label for="icon_telephone">Limit</label>
+        </div>
+      </div>
+      <div class="center-align col s6 offset-s3">
+        <button class="waves-effect waves-light btn" type="submit">Get Tweets!</button>  
+      </div>
+      
+    </form>
+  </div>
