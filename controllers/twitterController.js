@@ -26,8 +26,9 @@ function getListOfTweets(queryString, countFromUser) {
 }
 
 function _validateCountAndReturnTweetList(tweetList, countFromUser) {
+    
     var result = [];
-    if (tweetList.length < countFromUser)
+    if (tweetList.length < countFromUser) // After removing retweets, not enough tweet to meet user request. 
         result = tweetList;
     else result = tweetList.slice(0, countFromUser);
     return result;
@@ -51,6 +52,7 @@ function _initTwitterApi() {
 }
 module.exports = {
     getListOfTweets,
-    _validateCountAndReturnTweetList,
+    // We export helper functions too so that we can unit test them.
+    _validateCountAndReturnTweetList,  
     _isRetweet
 }
